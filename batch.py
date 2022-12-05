@@ -26,8 +26,7 @@ class CMD(Commander):
         return rect
 
     def genetate_image_circle(self, size=256, object_size=(50, 100), bg=(0, 0, 0), fg=(255, 255, 255)):
-
-        np.random.random_sample((256, 256))
+        np.random.random_sample((256, 256, 3))
         img = Image.new('RGB', (size, size), bg)
         rect = self.random_square(size=object_size)
         draw = ImageDraw.Draw(img)
@@ -35,7 +34,7 @@ class CMD(Commander):
         return img
 
     def genetate_image_square(self, size=256, object_size=(50, 100), bg=(0, 0, 0), fg=(255, 255, 255)):
-        img = Image.new('RGB', (size, size), bg)
+        img = Imew('RGB', (size, size), bg)
         rect = self.random_square(size=object_size)
         draw = ImageDraw.Draw(img)
         draw.rectangle(rect, fill=fg)
